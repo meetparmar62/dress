@@ -177,3 +177,53 @@ document.addEventListener('keydown', (event) => {
     closeLightbox();
   }
 });
+
+const imageElements = document.querySelectorAll('img');
+const touchVisualSelectors = [
+  'img',
+  '.slide',
+  '.collection-card',
+  '.gallery-item',
+  '.fabric-card',
+  '.factory-journal img',
+  '.hero-slider'
+].join(', ');
+let demoToastTimeout;
+
+if (imageElements.length > 0) {
+  const demoToast = document.createElement('div');
+  demoToast.className = 'demo-toast';
+  demoToast.setAttribute('role', 'status');
+  demoToast.setAttribute('aria-live', 'polite');
+  demoToast.textContent = 'Please contact for demo';
+  document.body.appendChild(demoToast);
+
+  function showDemoToast() {
+    demoToast.classList.add('show');
+    clearTimeout(demoToastTimeout);
+    demoToastTimeout = setTimeout(() => {
+      demoToast.classList.remove('show');
+    }, 2100);
+  }
+
+  const triggerToastFromTarget = (target) => {
+    const interactiveVisual = target.closest(touchVisualSelectors);
+    if (!interactiveVisual) {
+      return;
+    }
+
+    if (interactiveVisual.id === 'lightboxImage' || interactiveVisual.closest('.lightbox')) {
+      return;
+    }
+
+    showDemoToast();
+  };
+
+  document.addEventListener('click', (event) => {
+    triggerToastFromTarget(event.target);
+  });
+
+  document.addEventListener('touchstart', (event) => {
+    triggerToastFromTarget(event.target);
+  }, { passive: true });
+}
