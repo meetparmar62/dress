@@ -763,6 +763,29 @@ a {
   cursor: pointer;
 }
 
+.demo-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translate(-50%, 18px);
+  background: rgba(36, 31, 24, 0.9);
+  color: #fff;
+  border: 1px solid rgba(212, 175, 55, 0.42);
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 100;
+}
+
+.demo-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
