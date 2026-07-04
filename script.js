@@ -2,8 +2,34 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const prevButton = document.querySelector('.slider-control.prev');
 const nextButton = document.querySelector('.slider-control.next');
+const siteHeader = document.querySelector('.site-header');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav-links a');
 let currentSlide = 0;
 let autoplayId;
+
+if (navToggle && siteHeader) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = siteHeader.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 760) {
+        siteHeader.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) {
+      siteHeader.classList.remove('menu-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
 function showSlide(index) {
   slides.forEach((slide, idx) => {
