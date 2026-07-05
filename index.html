@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +16,21 @@
   <header class="site-header">
     <div class="site-header-inner">
       <a href="#hero" class="brand">
-        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="brand-logo" viewBox="0 0 64 64" role="img" aria-label="Aadyaa logo mark">
+            <defs>
+              <linearGradient id="aadyaaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f1d58c" />
+                <stop offset="55%" stop-color="#d4af37" />
+                <stop offset="100%" stop-color="#8f6a12" />
+              </linearGradient>
+            </defs>
+            <circle cx="32" cy="32" r="29" fill="#fffdf8" stroke="url(#aadyaaGold)" stroke-width="2.5" />
+            <path d="M17 44 L31 16 L45 44" fill="none" stroke="url(#aadyaaGold)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M23 34 H40" fill="none" stroke="#9b7417" stroke-width="3" stroke-linecap="round" />
+            <circle cx="32" cy="11.5" r="2.8" fill="#d4af37" />
+          </svg>
+        </span>
         <span>Aadyaa</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
@@ -86,14 +101,6 @@
           </p>
           <p>
             Our team of expert artisans, designers, and quality specialists work in a synchronized process to deliver consistent excellence for boutique labels, distributors, and large-scale B2B partners.
-          </p>
-        </article>
-        <article>
-          <p>
-            From fabric sourcing to final dispatch, each stage is built around durability, stitch accuracy, color integrity, and premium finishing. We manufacture with disciplined standards to meet bulk requirements without compromising aesthetics.
-          </p>
-          <p>
-            Aadyaa is trusted by partners who seek graceful design language, dependable quality, and scalable manufacturing capacity under one premium label.
           </p>
         </article>
       </div>
@@ -196,22 +203,22 @@
       <div class="wholesale-grid" aria-label="Wholesale order information">
         <article class="wholesale-card">
           <img class="wholesale-thumb" src="img/2b72b93f7711f50954092224c3c01b6e.jpg" alt="Minimum order wholesale kurti lot" />
-          <h3>📦 Minimum Order</h3>
+          <h3><i class="bi bi-box-seam wholesale-icon" aria-hidden="true"></i>Minimum Order</h3>
           <p>20 Pieces</p>
         </article>
         <article class="wholesale-card">
           <img class="wholesale-thumb" src="img/74f377820df6c45b3ccccef6d754788a.jpg" alt="Maximum order wholesale kurti lot" />
-          <h3>📦 Maximum Order</h3>
+          <h3><i class="bi bi-boxes wholesale-icon" aria-hidden="true"></i>Maximum Order</h3>
           <p>150 Pieces</p>
         </article>
         <article class="wholesale-card">
           <img class="wholesale-thumb" src="img/8c352d431ccaa4da992e8917339ad1d4.jpg" alt="Kurti size variants for wholesale" />
-          <h3>📏 Available Sizes</h3>
+          <h3><i class="bi bi-rulers wholesale-icon" aria-hidden="true"></i>Available Sizes</h3>
           <p>S • M • L • XL • XXL • XXXL</p>
         </article>
         <article class="wholesale-card">
           <img class="wholesale-thumb" src="img/e5d2cf0926ce3c499a92aece4bb110ce.jpg" alt="Premium kurti wholesale price range" />
-          <h3>💰 Price Range</h3>
+          <h3><i class="bi bi-currency-rupee wholesale-icon" aria-hidden="true"></i>Price Range</h3>
           <p>₹180 – ₹2,000</p>
         </article>
       </div>
@@ -222,16 +229,38 @@
 
     <section id="why-us" class="why-us section-pad reveal">
       <div class="section-head">
-        <p class="eyebrow">Why Choose Aadyaa</p>
-        <h2>B2B Reliability With Boutique Finesse</h2>
+        <p class="eyebrow">Why Choose Us</p>
+        <h2>Benefits For B2B Growth Partners</h2>
       </div>
-      <div class="value-grid">
-        <article>Premium Quality</article>
-        <article>Latest Designs</article>
-        <article>Skilled Craftsmanship</article>
-        <article>Quality Assurance</article>
-        <article>Bulk Manufacturing</article>
-        <article>Fast Delivery</article>
+      <div class="why-benefits">
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true"><i class="bi bi-tags-fill"></i></div>
+          <h3>Private Label Support</h3>
+          <p>
+            Apply your own brand label and your own brand logo on every product to grow your brand identity. Build customer trust and market your business under your own name.
+          </p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true"><i class="bi bi-megaphone-fill"></i></div>
+          <h3>Free Brand Promotion</h3>
+          <p>
+            Selling under your own label helps increase your brand recognition and long-term customer loyalty.
+          </p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true"><i class="bi bi-palette-fill"></i></div>
+          <h3>Custom Designs &amp; Colors</h3>
+          <p>
+            Choose custom designs, fabrics, colors, and patterns according to your business requirements.
+          </p>
+        </article>
+        <article class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true"><i class="bi bi-building-fill"></i></div>
+          <h3>Direct Manufacturer Pricing</h3>
+          <p>
+            No middlemen, get factory-direct pricing, better profit margins, consistent quality, and reliable bulk supply.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -273,17 +302,17 @@
       </div>
       <div class="contact-meta">
         <p>Email: business@aadyaa.in</p>
-        <p>Factory Address: Plot 24, Textile Industrial Estate, Surat, Gujarat, India</p>
+        <p>Factory Address: <i class="bi bi-geo-alt-fill address-icon" aria-hidden="true"></i>Nikol, Ahmedabad, Gujarat - 382350, India</p>
       </div>
     </section>
   </main>
 
   <aside class="floating-actions" aria-label="Quick contact actions">
     <a href="tel:+919601361549" class="float-btn call" aria-label="Call Aadyaa export manager">
-      <span>📞</span>
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
     </a>
     <a href="https://wa.me/919601361549" target="_blank" rel="noopener noreferrer" class="float-btn whatsapp" aria-label="Chat on WhatsApp">
-      <span>💬</span>
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
   </aside>
 
