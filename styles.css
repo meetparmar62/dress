@@ -30,6 +30,23 @@ body {
   line-height: 1.7;
 }
 
+.gst-badge {
+  position: fixed;
+  bottom: 14px;
+  left: 14px;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.95);
+  color: #121212;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(20, 20, 20, 0.12);
+  backdrop-filter: blur(6px);
+}
+
 h1,
 h2,
 h3 {
@@ -343,8 +360,8 @@ a {
 .contact-cta,
 .contact-meta,
 .masonry-grid,
-.factory-journal,
-.process-timeline {
+.wholesale-grid,
+.wholesale-cta-wrap {
   width: var(--container);
   margin-left: auto;
   margin-right: auto;
@@ -554,6 +571,86 @@ a {
   background:
     radial-gradient(circle at 88% 17%, rgba(218, 177, 70, 0.24), transparent 40%),
     linear-gradient(155deg, #fff, #f8f1e5 58%, #efe1c9);
+}
+
+.wholesale-info {
+  background:
+    radial-gradient(circle at 10% 10%, rgba(212, 175, 55, 0.08), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(0, 0, 0, 0.04), transparent 32%),
+    linear-gradient(180deg, #ffffff 0%, #faf8f4 100%);
+}
+
+.wholesale-head {
+  text-align: center;
+}
+
+.wholesale-subtitle {
+  margin: 12px auto 0;
+  max-width: 760px;
+  color: #555;
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+}
+
+.wholesale-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.wholesale-card {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  padding: 12px 12px 20px;
+  box-shadow: 0 10px 26px rgba(17, 17, 17, 0.08);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.wholesale-thumb {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: center 24%;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.wholesale-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(17, 17, 17, 0.12);
+}
+
+.wholesale-card h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.02rem;
+  margin-bottom: 10px;
+  color: #1f1f1f;
+}
+
+.wholesale-card p {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.wholesale-cta-wrap {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.wholesale-cta {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.2);
+}
+
+.wholesale-cta:hover {
+  background: #1fa15b;
+  border-color: #1fa15b;
+  box-shadow: 0 14px 30px rgba(31, 161, 91, 0.32);
 }
 
 .factory-journal {
@@ -825,6 +922,13 @@ a {
 }
 
 @media (max-width: 760px) {
+  .gst-badge {
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
   .hero {
     min-height: 82vh;
     padding: 24px 0;
@@ -907,7 +1011,8 @@ a {
   .collection-grid,
   .value-grid,
   .quality-grid,
-  .factory-journal {
+  .factory-journal,
+  .wholesale-grid {
     grid-template-columns: 1fr;
   }
 
@@ -935,6 +1040,10 @@ a {
 
   .fabric-card p {
     font-size: 0.92rem;
+  }
+
+  .wholesale-thumb {
+    height: 185px;
   }
 
   .masonry-grid {
